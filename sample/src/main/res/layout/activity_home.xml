@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_search_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_search" />
+
+        <me.haowen.textbanner.TextBanner
+            android:id="@+id/textBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:delayTime="5000"
+            app:duration="800" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="淘宝头条"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <me.haowen.textbanner.TextBanner
+            android:id="@+id/customTextBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:animIn="@anim/anim_in"
+            app:animOut="@anim/anim_out"
+            app:delayTime="2000"
+            app:duration="500" />
+
+    </LinearLayout>
+
+</LinearLayout>

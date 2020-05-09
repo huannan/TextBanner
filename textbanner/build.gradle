@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    artifactId = 'textbanner'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    publishVersion = rootProject.publishVersion
+    desc = rootProject.desc
+    website = rootProject.website
+    licences = rootProject.licences
+}
+
+group = 'com.github.HaowenLee'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 5
+        versionName "1.0.4"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'androidx.annotation:annotation:1.0.2'
+}
